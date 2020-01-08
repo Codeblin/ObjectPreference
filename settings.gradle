@@ -1,0 +1,4 @@
+rootProject.name='ObjectPreference'
+include ':app'
+include ':annotations'
+include ':compiler'
