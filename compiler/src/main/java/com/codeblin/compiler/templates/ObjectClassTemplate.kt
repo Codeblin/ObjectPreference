@@ -10,17 +10,17 @@ object ObjectClassTemplate : Template {
         "package $packageName\n" +
                 "\n" +
                 "class ${className}StoreModel(\n" +
-                "    private val value: $type\n" +
+                "    private val value: $className\n" +
                 ") {\n" +
                 "    fun save() {\n" +
-                "        $packageName.SharedPrefManager.saveObject<$type>(\n" +
+                "        $packageName.SharedPrefManager.saveObject<$className>(\n" +
                 "            \"$className\",\n" +
                 "            value\n" +
                 "        )\n" +
                 "    }\n" +
                 "\n" +
-                "    fun get(): $type =\n" +
-                "        $packageName.SharedPrefManager.getObject<$type>(\n" +
+                "    fun get(): $className =\n" +
+                "        $packageName.SharedPrefManager.getObject<$className>(\n" +
                 "            \"$className\"\n" +
                 "        )\n" +
                 "\n" +
