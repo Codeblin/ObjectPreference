@@ -5,6 +5,27 @@ Fast and easy Shared Preferences managing with object mapping annotations for si
 
 ### How to use
 
+* app build.gradle
+
+```gradle
+implementation 'com.codeblin.annotations:ObjectPreferences:<latest-version>'
+kapt 'com.codeblin.compiler:ObjectPreferencesCompiler:<latest-version>'
+```
+
+ObjectPreferences uses java 8 so you need to set compile  options to target Java 8
+```
+android{
+	compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+```
+
 * First create you model and annotate with `@Document` Annotation
 
 _Example_
@@ -31,7 +52,6 @@ data class Transaction(
 ```kotlin
 SharedPrefManager.initialize(this)
 ```
-**This will generate a class that you will be using for save/get/delete operations with the suffix 'StoreModel' and a manager that handles `SharedPreferences`**
 
 ```kotlin
 class UserStoreModel(
