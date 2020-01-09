@@ -18,7 +18,6 @@ object SharePrefManagerTemplate {
                 "\n" +
                 "    fun initialize(app: Application) {\n" +
                 "        sharedPref = app.getSharedPreferences(\"$packageName\", Context.MODE_PRIVATE)\n" +
-                "        sharedPref?.edit()?.clear()?.apply()\n" +
                 "    }\n" +
                 "\n" +
                 "    fun clear(){\n" +
