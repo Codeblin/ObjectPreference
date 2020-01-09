@@ -99,3 +99,8 @@ user.get()
 ```kotlin
 user.delete()
 ```
+* Clear all 
+
+```kotlin
+SharedPrefManager.clear()
+```
