@@ -47,11 +47,13 @@ data class Transaction(
 )
 ```
 
-* Now initialize `SharedPrefManager` at your Application class
+* **Build project**. Now initialize `SharedPrefManager` at your Application class
 
 ```kotlin
 SharedPrefManager.initialize(this)
 ```
+
+This will generate the class you will be using which is the name of your class with the suffix 'StoreModel'
 
 ```kotlin
 class UserStoreModel(
@@ -78,6 +80,8 @@ class UserStoreModel(
 ### :sparkles::sparkles:That's it!:sparkles::sparkles:
 
 #### Operations
+
+Use \<your-annotated-class-name\>StoreModel class to operate
 
 * Save 
 
