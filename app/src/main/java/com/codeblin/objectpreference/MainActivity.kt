@@ -20,6 +20,11 @@ class MainActivity : AppCompatActivity() {
             txtAge.text = "Age: $age\nTransactions: "
             spinnerTransactions.adapter = ArrayAdapter<String>(this@MainActivity, android.R.layout.simple_spinner_dropdown_item, transactions.map { it.amount.toString() })
         }
+        val primitive = TestPrimitiveStoreModel(TestPrimitive(100)).apply { save() }
+        val retrievedPrimitive = primitive.get()
+        val list = TestListStoreModel(listOf("String", "String", "String")).apply { save() }
+        val retrievedList = list.get()
+        print("Stop")
     }
 
     fun generateUser(): User {
@@ -39,6 +44,12 @@ data class User(
     val age: Int,
     val transactions: List<Transaction>
 )
+
+@Document
+data class TestPrimitive(val someValue: Int)
+
+@Document
+data class TestList(val transactions: List<String>)
 
 data class Transaction(
     val id: Int,

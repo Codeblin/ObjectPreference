@@ -6,7 +6,7 @@ import com.google.gson.reflect.TypeToken
 class GsonWrapper {
     val gson = Gson()
 
-    inline fun <reified T>getJsonString(value: T) = gson.toJson(value, T::class.java)
+    inline fun <reified T>getJsonString(value: T?) = gson.toJson(value, T::class.java)
 
     inline fun <reified T>getObject(value: String) = gson.fromJson(value, T::class.java)
 

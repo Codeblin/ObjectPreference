@@ -9,9 +9,13 @@ object ListClassTemplate : Template {
     ) =
         "package $packageName\n" +
                 "\n" +
-                "class ${className}StoreModel(\n" +
-                "    private val value: $type\n" +
-                ") {\n" +
+                "class ${className}StoreModel() {\n" +
+                "    var value: $type? = null\n" +
+                "\n" +
+                "    constructor(value: $type) : this() {\n" +
+                "        this.value = value\n" +
+                "    }\n" +
+                "\n" +
                 "    fun save() {\n" +
                 "        $packageName.SharedPrefManager.saveObject<$type>(\n" +
                 "            \"$className\",\n" +

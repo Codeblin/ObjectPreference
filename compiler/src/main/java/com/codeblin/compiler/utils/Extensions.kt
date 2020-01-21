@@ -9,6 +9,12 @@ fun TypeName.getKotlinType() = when {
     else -> this
 }
 
+fun String.getKotlinType() = when {
+    this == "java.lang.String" -> ClassName("kotlin", "String").toString()
+    this.contains("java.util.List") -> ClassName("kotlin.collections", "List").toString()
+    else -> this
+}
+
 fun TypeName.isCollection() = this.toString().contains("java.util.List")
 
 fun TypeName.extractCollectionType(): String = "<([^}]+)>".toRegex().find(this.toString())?.value

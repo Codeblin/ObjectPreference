@@ -36,7 +36,7 @@ object SharePrefManagerTemplate {
                 "        }\n" +
                 "    }\n" +
                 "\n" +
-                "    inline fun <reified T> saveObject(key: String, value: T) = sharedPref?.edit()?.putString(key, gsonWrapper.getJsonString<T>(value))?.apply()\n" +
+                "    inline fun <reified T> saveObject(key: String, value: T?) = sharedPref?.edit()?.putString(key, gsonWrapper.getJsonString<T>(value))?.apply()\n" +
                 "\n" +
                 "    fun delete(key: String) = sharedPref?.edit()?.remove(key)?.apply()\n" +
                 "\n" +

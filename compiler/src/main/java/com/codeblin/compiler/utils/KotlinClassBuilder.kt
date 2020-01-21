@@ -45,8 +45,8 @@ class KotlinClassBuilder(
                 ListClassTemplate.getTemplate(
                     packageName,
                     className,
-                    "${value.asType().asTypeName().getKotlinType()}<${value.asType().asTypeName().extractCollectionType()}>",
-                    value.asType().asTypeName().extractCollectionType()
+                    "${value.asType().asTypeName().getKotlinType()}<${value.asType().asTypeName().extractCollectionType().getKotlinType()}>",
+                    value.asType().asTypeName().extractCollectionType().getKotlinType()
                 )
             } else {
                 ObjectClassTemplate.getTemplate(

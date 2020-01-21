@@ -9,9 +9,13 @@ object ObjectClassTemplate : Template {
     ): String =
         "package $packageName\n" +
                 "\n" +
-                "class ${className}StoreModel(\n" +
-                "    private val value: $className\n" +
-                ") {\n" +
+                "class ${className}StoreModel() {\n" +
+                "    var value: $className? = null\n" +
+                "\n" +
+                "    constructor(value: $className) : this() {\n" +
+                "        this.value = value\n" +
+                "    }\n" +
+                "\n" +
                 "    fun save() {\n" +
                 "        $packageName.SharedPrefManager.saveObject<$className>(\n" +
                 "            \"$className\",\n" +
