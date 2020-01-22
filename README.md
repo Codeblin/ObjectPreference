@@ -79,7 +79,7 @@ class UserStoreModel(
 
 ### :sparkles::sparkles:That's it!:sparkles::sparkles:
 
-#### Operations
+#### Features
 
 Use \<your-annotated-class-name\>StoreModel class to operate
 
@@ -99,6 +99,12 @@ user.get()
 ```kotlin
 user.delete()
 ```
+* Create an instance with the default empty constructor to reuse your StoreModel across your app 
+
+```kotlin
+user = UserStoreModel()
+```
+
 * Clear all 
 
 ```kotlin
