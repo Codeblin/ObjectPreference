@@ -10,9 +10,9 @@ object SimpleClassTemplate : Template {
         "package $packageName\n" +
                 "\n" +
                 "class ${className}StoreModel() {\n" +
-                "    var value: $className? = null\n" +
+                "    var value: $type? = null\n" +
                 "\n" +
-                "    constructor(value: $className) : this() {\n" +
+                "    constructor(value: $type) : this() {\n" +
                 "        this.value = value\n" +
                 "    }\n" +
                 "\n" +
