@@ -24,7 +24,7 @@ object SharePrefManagerTemplate {
                 "        sharedPref?.edit()?.clear()?.apply()\n" +
                 "    }\n" +
                 "\n" +
-                "    fun save(key: String, value: Any) {\n" +
+                "    fun save(key: String, value: Any?) {\n" +
                 "        if (sharedPref == null) return\n" +
                 "        when (value) {\n" +
                 "            is String -> sharedPref?.edit()?.putString(key, value)?.apply()\n" +

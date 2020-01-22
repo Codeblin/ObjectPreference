@@ -56,3 +56,6 @@ data class Transaction(
     val date: Date,
     val amount: Double
 )
+
+@Document
+data class UserPrimitive(val name: Double)
