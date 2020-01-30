@@ -11,7 +11,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class PrimitiveClassTest {
+class IntegerClassTest {
     companion object{
         const val ASSERTION_VALUE = 100
     }
