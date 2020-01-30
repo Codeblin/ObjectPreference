@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         user.get().apply {
             txtFirstName.text = "First Name: $firstName"
             txtLastName.text ="Last Name: $lastName"
-            txtAge.text = "Age: $age\nTransactions: "
+            txtAge.text = "Age: $age\nTransactions:"
             spinnerTransactions.adapter = ArrayAdapter<String>(this@MainActivity, android.R.layout.simple_spinner_dropdown_item, transactions.map { it.amount.toString() })
         }
         val primitive = TestPrimitiveStoreModel(TestPrimitive(100)).apply { save() }
