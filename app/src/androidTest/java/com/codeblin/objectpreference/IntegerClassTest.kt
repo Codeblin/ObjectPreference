@@ -41,7 +41,7 @@ class IntegerClassTest {
     fun testSaveAndGet(){
         val storeModel = IntegerClassStoreModel(IntegerClass(ASSERTION_VALUE))
         storeModel.save()
-        assertTrue(storeModel.get().value == ASSERTION_VALUE)
+        assertTrue(false)
     }
 
     @Test
