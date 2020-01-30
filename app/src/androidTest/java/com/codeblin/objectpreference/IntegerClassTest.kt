@@ -9,6 +9,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.junit.Assert.*
 
 @RunWith(AndroidJUnit4::class)
 class IntegerClassTest {
@@ -27,26 +28,26 @@ class IntegerClassTest {
     @Test
     fun sharedPrefManagerIsInitialized() {
         SharedPrefManager.initialize(activityRule.activity.application)
-        assert(SharedPrefManager.sharedPref != null)
+        assertTrue(SharedPrefManager.sharedPref != null)
     }
 
     @Test
     fun testInternalValue(){
         val storeModel = IntegerClassStoreModel(IntegerClass(ASSERTION_VALUE))
-        assert(storeModel.value?.value == ASSERTION_VALUE)
+        assertTrue(storeModel.value?.value == ASSERTION_VALUE)
     }
 
     @Test
     fun testSaveAndGet(){
         val storeModel = IntegerClassStoreModel(IntegerClass(ASSERTION_VALUE))
         storeModel.save()
-        assert(storeModel.get().value == ASSERTION_VALUE)
+        assertTrue(storeModel.get().value == ASSERTION_VALUE)
     }
 
     @Test
     fun testDelete(){
         val storeModel = IntegerClassStoreModel(IntegerClass(ASSERTION_VALUE))
         storeModel.delete()
-        assert(storeModel.get() == null)
+        assertTrue(storeModel.get() == null)
     }
 }
