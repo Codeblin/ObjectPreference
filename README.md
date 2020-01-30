@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/Codeblin/ObjectPreference.svg?style=svg)](https://circleci.com/gh/Codeblin/ObjectPreference/tree/master)
 ![Bintray](https://img.shields.io/bintray/v/stamatisstiliatis/ObjectPreferencesCompiler/ObjectPreferencesCompiler) 
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-ObjectPreference-green.svg?style=flat )]( https://android-arsenal.com/details/1/8030 )
 # ObjectPreference
