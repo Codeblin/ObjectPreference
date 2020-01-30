@@ -1,4 +1,5 @@
 ![Bintray](https://img.shields.io/bintray/v/stamatisstiliatis/ObjectPreferencesCompiler/ObjectPreferencesCompiler) 
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-ObjectPreference-green.svg?style=flat )]( https://android-arsenal.com/details/1/8030 )
 # ObjectPreference
 Fast and easy Shared Preferences managing with object mapping annotations for simple or complex class structures
 
